@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #111;
+    --white: #fff;
+    --gray-light: #E2E8F0;
+    --gray: #CBD5E1;
+    --accent-green: #3CC87D;
+    --accent-green-dark: #31915C;
+    --accent-green-light: #D8F4E5;
+    --error-red-light: #FCCECE;
+}
+
+body, footer {
+    margin: 0 auto;
+}
+
+body, footer, button {
+    font-family: 'Familjen Grotesk', Roboto, sans-serif;
+    font-size: 20px;
+}
+
+main {
+    max-width: 1600px;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.space-btw {
+    justify-content: space-between;
+}
+
+nav {
+    padding: 16px 24px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+nav, nav button {
+    font-size: 18px;
+}
+
+#nav-links, section {
+    gap: 50px;
+}
+
+#footer-links {
+    gap: 24px
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, #selling-points i {
+    color: var(--accent-green-dark);
+}
+
+nav a, button.primary, .banner {
+    color: var(--white, #fff);
+}
+
+button {
+    padding: 12px 22px 14px;
+    border-radius: 100px;
+    border: 0;
+    cursor: pointer;
+}
+
+button.primary, nav {
+    background-color: var(--accent-green);
+}
+
+button.secondary {
+    background-color: var(--white, #fff);
+}
+
+button.dark {
+    background-color: var(--accent-green-dark);
+}
+
+nav .buttons {
+    gap: 16px;
+}
+
+h2 {
+    font-size: 72px;
+    line-height: 68px;
+}
+
+h3 {
+    font-size: 48px;
+    line-height: 46px;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+h2, h3, p {
+    margin-bottom: 24px;
+}
+
+section, #quiz > div, #join > div, footer {
+    padding: 80px;
+}
+
+#recipe .img-container {
+    gap: 20px;
+}
+
+#pasta {
+    position: relative;
+    top: 60px;
+}
+
+img {
+    border-radius: 20px;
+    object-fit: contain;
+}
+
+#gif-container {
+    border: var(--gray-light) 1px solid;
+    border-bottom: none;
+    border-radius: 20px;
+}
+
+#hero {
+    border-bottom: 1px var(--gray-light) solid;
+}
+
+section > div, .banner > div {
+    width: 50%;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+#gif {
+    border-radius: 0 0 20px 20px;
+    border-bottom: var(--gray-light) 1px solid;
+}
+
+i {
+    margin-left: 10px;
+}
+
+.banner {
+    border-radius: 30px;
+    width: 100%;
+    min-height: 340px;
+}
+
+#quiz .banner {
+    background: linear-gradient(0deg, rgba(60, 200, 125, 0.75) 0%, rgba(60, 200, 125, 0.75) 100%), linear-gradient(270deg, #000 1.85%, rgba(0, 0, 0, 0.00) 63.65%), url('./imgs/meal-plan.png'), lightgray 50% / contain no-repeat;
+}
+
+#quiz .banner > div {
+    margin-left: auto;
+}
+
+#join .banner {
+    background: linear-gradient(100deg, #3CC87D 0%, #3CC87D 33%, #97A6F4 100%);
+    text-align: center;
+}
+
+#join .banner > div {
+    margin: 0 auto;
+}
+
+table {
+    border-radius: 8px;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px var(--gray);
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+th {
+    width: 33.3%;
+    background-color: var(--gray-light);
+}
+
+th, td {
+    padding: 16px;
+    border: var(--gray) 1px solid;
+}
+
+.error {
+    background-color: var(--error-red-light);
+}
+
+.success {
+    background-color: var(--accent-green-light);
+}
+
+#selling-points li {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#selling-points i {
+    border-radius: 100%;
+    background-color: var(--accent-green-light);
+    padding: 8px;
+    margin-left: -40px;
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 1080px) {
+    section, #quiz > div, #join > div, footer {
+        padding: 60px;
+    }
+
+    h2 {
+        font-size: 62px;
+        line-height: 52px;
+    }
+
+    h3 {
+        font-size: 42px;
+        line-height: 40px;
+    }
+
+    p, main li {
+        font-size: 18px;
+    }
+
+    .banner > div {
+        width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 980px) {
+    section, #quiz > div, #join > div, footer {
+        padding: 60px 40px;
+    }
+
+    #hero img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    #pasta, #pasta + button {
+        display: none;
+    }
+
+    #goals, #data, footer {
+        flex-direction: column;
+    }
+
+    #goals > *, #data > * {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 44px;
+    }
+
+    #nav-links {
+        display: none;
+    }
+}
