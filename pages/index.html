@@ -5,108 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat Wise</title>
     <link rel="stylesheet" href="../styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c08bc4236f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html"><h1>Eat Wise</h1>></a>
-        <ul>
-            <li class="nav-link"><a href="#">About</a></li>
-            <li class="nav-link"><a href="#">Food</a></li>
-            <li class="nav-link"><a href="#">Exercise</a></li>
-            <li class="nav-link"><a href="#">Community</a></li>
+    <nav class="flex">
+        <a href="index.html"><h1>Eat Wise</h1></a>
+        <ul id="nav-links" class="flex nav">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Exercise</a></li>
+            <li><a href="#">Community</a></li>
         </ul>
-        <div>
+        <div class="buttons flex align-center">
             <a href="login.html">Log In</a>
             <button class="secondary green" type="button" >Get Started</button>
         </div>
     </nav>
-    <section id="hero" class="flex">
-        <div>
-            <h2>Eat wise, live well</h2>
-            <p>Optimize your nutrition, track your workouts, and sync with a healthier you.</p>
-            <button class="primary" type="button">Start tracking</button>
-        </div>
-        <img src="../imgs/hero.png" alt="Woman enjoying a bowl of pasta"/>
-    </section>
-    <section id="recipe" class="flex">
-        <div>
+    <main>
+        <section id="hero" class="flex align-center">
             <div>
-                <img src="" alt="Pesto pasta salad"/>
-                <button class="secondary" type="button">Get this recipe</button>
+                <h2>Eat wise, live well</h2>
+                <p>Optimize your nutrition, track your workouts, and sync with a healthier you.</p>
+                <button class="primary" type="button">Start tracking</button>
+            </div>
+            <div class="img-container">
+                <img src="../imgs/hero.png" alt="Woman enjoying a bowl of pasta"/>
+            </div>
+        </section>
+        <section id="recipe" class="flex align-center">
+            <div class="img-container flex">
+                <div>
+                    <img id="pasta" src="../imgs/pasta-salad.png" alt="Pesto pasta salad"/>
+                    <button class="secondary" type="button">Get this recipe</button>
+                </div>
+                <div>
+                    <img src="../imgs/salmon.png" alt="Salmon with fresh vegetables"/>
+                    <button class="secondary" type="button">Get this recipe</button>
+                </div>
             </div>
             <div>
-                <img src="" alt="Salmon with fresh vegetables"/>
-                <button class="secondary" type="button">Get this recipe</button>
+                <h3>Savor the goodness</h3>
+                <p>From vibrant salads to hearty main courses and guilt-free desserts, you'll find the perfect balance of health and taste. Transform your meals into a celebration of nourishing goodness without compromising on flavor.</p>
+                <a href="#">Explore recipes<i class="fa-solid fa-arrow-right"></i></a>
             </div>
-        </div>
-        <div>
-            <h3>Savor the goodness</h3>
-            <p>From vibrant salads to hearty main courses and guilt-free desserts, you'll find the perfect balance of health and taste. Transform your meals into a celebration of nourishing goodness without compromising on flavor.</p>
-            <a href="#">Explore recipes <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </section>
-    <section class="flex">
-        <div>
-            <h3>Reach your goals</h3>
-            <p>Don’t just count calories, measure your lifestyle. Track the impact of your food choices, exercise routines, and more.</p>
-            <ul>
-                <li>Integrate up to 14 apps to track your food and activity</li>
-                <li>Discover new foods with our library of 200+ recipes</li>
-                <li>Join our supportive community of Wisers</li>
-            </ul>
-            <a href="#">Get started <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <img src="../imgs/hero.png" alt="Woman enjoying a bowl of pasta"/>
-    </section>
-    <section id="quiz">
-        <h3>Get your personalized meal plans</h3>
-        <button class="secondary" type="button">Take the quiz <i class="fa-solid fa-arrow-right"></i></button>
-    </section>
-    <section id="data">
-        <div>
-            <h3>Power your health</h3>
-            <p>Dive into data-driven insights and detailed nutrient breakdowns of your meals. Understand the vitamins, minerals, and macros that fuel your body, allowing you to make informed choices for a balanced diet.</p>
-            <a href="#">Check out the tools <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <table>
-            <thead>
-                <th>Macronutrients</th>
-                <th>Percentage (%) of total intake</th>
-                <th>Goal percentage (%)</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Fat</td>
-                    <td class="error">30%</td>
-                    <td>20%</td>
-                </tr>
-                <tr>
-                    <td>Carbs</td>
-                    <td class="error">35%</td>
-                    <td>45%</td>
-                </tr>
-                <tr>
-                    <td>Protein</td>
-                    <td class="success">35%</td>
-                    <td>35%</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    <section id="join">
-        <h3>Join the community</h3>
-        <p> Connect with like-minded individuals today and embark on an adventure towards a wiser, healthier you.</p>
-        <button class="primary dark">Sign Up <i class="fa-solid fa-arrow-right"></i></button>
-    </section>
+        </section>
+        <section id="goals" class="flex align-center">
+            <div>
+                <h3>Reach your goals</h3>
+                <p>Don’t just count calories, measure your lifestyle. Track the impact of your food choices, exercise routines, and more.</p>
+                <ul id="selling-points">
+                    <li><i class="fa-solid fa-check"></i>Integrate up to 14 apps to track your food and activity</li>
+                    <li><i class="fa-solid fa-check"></i>Discover new foods with our library of 200+ recipes</li>
+                    <li><i class="fa-solid fa-check"></i>Join our supportive community of Wisers</li>
+                </ul>
+                <a href="#">Get started<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div id="gif-container" class="img-container">
+                <img id="top-bar" src="../imgs/top-bar.png" alt=""/> <!-- Decorative img-->
+                <img id="gif" src="../imgs/sit-ups.gif" alt="Woman doing sit-ups on the beach"/>
+            </div>
+        </section>
+        <section id="quiz">
+            <div class="banner flex align-center">
+                <div>
+                    <h3>Get your personalized meal plans</h3>
+                    <button class="secondary" type="button">Take the quiz<i class="fa-solid fa-arrow-right"></i></button>            
+                </div>
+            </div>
+        </section>
+        <section id="data" class="flex align-center">
+            <div>
+                <h3>Power your health</h3>
+                <p>Dive into data-driven insights and detailed nutrient breakdowns of your meals. Understand the vitamins, minerals, and macros that fuel your body, allowing you to make informed choices for a balanced diet.</p>
+                <a href="#">Check out the tools<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Macronutrients</th>
+                        <th>Goal percentage (%)</th>
+                        <th>Percentage (%) of total intake</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fat</td>
+                        <td>20%</td>
+                        <td class="error">30%</td>
+                    </tr>
+                    <tr>
+                        <td>Carbs</td>
+                        <td>45%</td>
+                        <td class="error">35%</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td>
+                        <td>35%</td>
+                        <td class="success">35%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="join">
+            <div class="banner flex align-center">
+                <div>
+                    <h3>Join the community</h3>
+                    <p> Connect with like-minded individuals today and embark on an adventure towards a wiser, healthier you.</p>
+                    <button class="primary dark">Sign Up<i class="fa-solid fa-arrow-right"></i></button>            
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
-<footer class="flex">
-    <p><span class="bold">Eat Wise</span>© 2023. All rights reserved.</p>
-    <ul>
-        <li class="footer-link"><a href="#">Terms</a></li>
-        <li class="footer-link"><a href="#">Privacy</a></li>
-        <li class="footer-link"><a href="#">Support</a></li>
-        <li class="footer-link"><a href="#">Contact</a></li>
+<footer class="flex space-btw">
+    <p><span class="bold">Eat Wise </span>© 2023. All rights reserved.</p>
+    <ul id="footer-links" class="flex">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 </footer>
 </html>
