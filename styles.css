@@ -15,12 +15,29 @@
     --error-red-light: #FCCECE;
 }
 
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+		clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
 body, footer {
     margin: 0 auto;
 }
 
-body, footer, button {
+body, footer, button, input, select {
     font-family: 'Familjen Grotesk', Roboto, sans-serif;
+}
+
+body, footer, button {
     font-size: 20px;
 }
 
@@ -32,12 +49,20 @@ main {
     display: flex;
 }
 
-.align-center {
-    align-items: center;
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
 }
 
 .space-btw {
     justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
 }
 
 nav {
@@ -80,6 +105,8 @@ button {
     border-radius: 100px;
     border: 0;
     cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
 }
 
 button.primary, nav {
@@ -94,6 +121,11 @@ button.dark {
     background-color: var(--accent-green-dark);
 }
 
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
 nav .buttons {
     gap: 16px;
 }
@@ -103,7 +135,7 @@ h2 {
     line-height: 68px;
 }
 
-h3 {
+h3, .h3 {
     font-size: 48px;
     line-height: 46px;
 }
@@ -116,15 +148,24 @@ h2, h3, p {
     margin-bottom: 24px;
 }
 
-section, #quiz > div, #join > div, footer {
+section, #quiz > div, #join > div {
     padding: 80px;
 }
 
-#recipe .img-container {
+footer {
+    padding: 20px 80px 20px
+}
+
+#recipe-imgs {
     gap: 20px;
 }
 
-#pasta {
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+#recipe-imgs .img-container:first-child {
     position: relative;
     top: 60px;
 }
@@ -133,6 +174,17 @@ img {
     border-radius: 20px;
     object-fit: contain;
 }
+
+button.recipe {
+    position: absolute;
+    left: 20px;
+    bottom: -50px;
+    transition: bottom 0.3s ease;
+}
+
+.img-container:hover button.recipe {
+    bottom: 20px;
+  }
 
 #gif-container {
     border: var(--gray-light) 1px solid;
@@ -242,7 +294,7 @@ th, td {
         line-height: 52px;
     }
 
-    h3 {
+    h3, .h3 {
         font-size: 42px;
         line-height: 40px;
     }
