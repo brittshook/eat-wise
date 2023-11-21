@@ -85,12 +85,12 @@
             <h2 id="welcome-back" class="h3" style="display: none;">Welcome back</h2>
             <label class="flex flex-col" for="email">
                 Email address
-                <input id="email" type="email" placeholder="name@example.com"/> 
+                <input id="email" type="email" name="email" placeholder="name@example.com" required/> 
             </label>
             <button id="with-email" class="secondary flex align-center justify-center " type="button"><i class="fa-regular fa-envelope"></i>Continue with email</button>
             <label class="flex-col" style="display: none;" for="password">
                 Password
-                <input id="password" type="password" placeholder="********" autocomplete="current-password"/> 
+                <input id="password" type="password" name="password" placeholder="********" autocomplete="current-password" required/> 
             </label>
             <button id="login" class="primary" style="display: none;" type="submit">Log in</button>
         </form>
