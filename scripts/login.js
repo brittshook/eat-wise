@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             welcomeBack.style.display = 'block';
             buttonLogIn.style.display = 'block';
         } else {
-
+            window.location.href = '../pages/register.html';
         }
 
     })
