@@ -21,7 +21,7 @@
         </ul>
         <div class="buttons flex align-center">
             <a href="login.html">Log In</a>
-            <button class="secondary green" type="button" >Get Started</button>
+            <button class="secondary green" type="button" onclick="window.location.href = 'register.html'">Get Started</button>
         </div>
     </nav>
     <main>
@@ -36,14 +36,14 @@
             </div>
         </section>
         <section id="recipe" class="flex align-center">
-            <div class="img-container flex">
-                <div>
+            <div id="recipe-imgs" class="flex">
+                <div class="img-container">
                     <img id="pasta" src="../imgs/pasta-salad.png" alt="Pesto pasta salad"/>
-                    <button class="secondary" type="button">Get this recipe</button>
+                    <button class="secondary recipe" type="button">Get this recipe</button>
                 </div>
-                <div>
+                <div class="img-container">
                     <img src="../imgs/salmon.png" alt="Salmon with fresh vegetables"/>
-                    <button class="secondary" type="button">Get this recipe</button>
+                    <button class="secondary recipe" type="button">Get this recipe</button>
                 </div>
             </div>
             <div>
@@ -61,7 +61,7 @@
                     <li><i class="fa-solid fa-check"></i>Discover new foods with our library of 200+ recipes</li>
                     <li><i class="fa-solid fa-check"></i>Join our supportive community of Wisers</li>
                 </ul>
-                <a href="#">Get started<i class="fa-solid fa-arrow-right"></i></a>
+                <a href="register.html">Get started<i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div id="gif-container" class="img-container">
                 <img id="top-bar" src="../imgs/top-bar.png" alt=""/> <!-- Decorative img-->
@@ -114,7 +114,7 @@
                 <div>
                     <h3>Join the community</h3>
                     <p> Connect with like-minded individuals today and embark on an adventure towards a wiser, healthier you.</p>
-                    <button class="primary dark">Sign Up<i class="fa-solid fa-arrow-right"></i></button>            
+                    <button class="primary dark" type="button" onclick="window.location.href = 'register.html'">Sign Up<i class="fa-solid fa-arrow-right"></i></button>            
                 </div>
             </div>
         </section>
