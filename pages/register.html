@@ -142,7 +142,7 @@
         <div id="part-1" class="flex flex-col">
             <h2 class="h3">Create an account</h2>
             <div>
-                <input id="file" type="file" accept="image/*"/>
+                <input id="file" type="file" name="profile-pic" accept="image/*"/>
                 <div id="profile-pic">
                     <label for="file" class="sr-only">Upload your profile picture</label>
                 </div>
@@ -152,28 +152,28 @@
             </div>
             <label class="flex flex-col" for="first">
                 First name
-                <input id="first" type="text" min="1" max="30" placeholder="Katniss" required/> 
+                <input id="first" type="text" name="first-name" min="1" max="30" placeholder="Katniss" required/> 
             </label>
             <label class="flex flex-col" for="last">
                 Last name
-                <input id="last" type="text" min="1" max="30" placeholder="Everdeen" required/> 
+                <input id="last" type="text" name="last-name" min="1" max="30" placeholder="Everdeen" required/> 
             </label>
             <label class="flex flex-col" for="new-password">
                 Set password
-                <input id="new-password" type="text" min="8" max="30" placeholder="********" autocomplete="new-password" required/> 
+                <input type="password" id="new-password" name="password" type="text" min="8" max="30" placeholder="********" autocomplete="new-password" required/> 
             </label>
             <button id="next" class="primary" type="button">Next</button>
         </div>
         <div id="part-2" class="flex flex-col align-center">
             <label id="diet" class="flex"> I eat a...
-                <select id="diet-dropdown">
-                    <option>Omnivore</option>
-                    <option>Pescatarian</option>
-                    <option>Vegetarian</option>
-                    <option>Vegan</option>
-                    <option>Keto</option>
-                    <option>Gluten-free</option>
-                    <option>Dairy-free</option>
+                <select id="diet-dropdown" name="diet-dropdown">
+                    <option value="omnivore">Omnivore</option>
+                    <option value="pescatarian">Pescatarian</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="keto">Keto</option>
+                    <option value="gluten-free">Gluten-free</option>
+                    <option value="dairy-free">Dairy-free</option>
                 </select>
                 diet
             </label>
@@ -181,14 +181,14 @@
                 <legend>I enjoy moving my body by...</legend>
                 <div id="exercise-options" class="flex flex-col">
                     <div class="row flex">
-                        <label class="flex flex-col align-center"><img src="../imgs/run.png" alt="Illustration of woman running outside"/><input type="checkbox">Running</label>
-                        <label class="flex flex-col align-center"><img src="../imgs/cycling.png" alt="Illustration of man road biking"/><input type="checkbox">Cycling</label>
-                        <label class="flex flex-col align-center"><img src="../imgs/swim.png" alt="Illustration of person swimming in a pool"/><input type="checkbox">Swimming</label>
+                        <label for="run" class="flex flex-col align-center"><img src="../imgs/run.png" alt="Illustration of woman running outside"/><input id="run" value="run" name="exercise" type="checkbox">Running</label>
+                        <label for="bike" class="flex flex-col align-center"><img src="../imgs/cycling.png" alt="Illustration of man road biking"/><input id="bike" value="bike" name="exercise" type="checkbox">Cycling</label>
+                        <label for="swim" class="flex flex-col align-center"><img src="../imgs/swim.png" alt="Illustration of person swimming in a pool"/><input id="swim" value="swim" name="exercise" type="checkbox">Swimming</label>
                     </div>
                     <div class="row flex">
-                        <label class="flex flex-col align-center"><img src="../imgs/weightlift.png" alt="Illustration of man lifting weights in a gym"/><input type="checkbox">Weightlifting</label>
-                        <label class="flex flex-col align-center"><img src="../imgs/yoga.png" alt="Illustration of woman doing yoga"/><input type="checkbox">Yoga</label>
-                        <label class="flex flex-col align-center"><img src="../imgs/soccer.png" alt="Illustration of two men playing soccer"/><input type="checkbox">Organized Sports</label>   
+                        <label for="weights" class="flex flex-col align-center"><img src="../imgs/weightlift.png" alt="Illustration of man lifting weights in a gym"/><input id="weights" value="weightlift" name="exercise" type="checkbox">Weightlifting</label>
+                        <label for="yoga" class="flex flex-col align-center"><img src="../imgs/yoga.png" alt="Illustration of woman doing yoga"/><input id="yoga" value="yoga" name="exercise" type="checkbox">Yoga</label>
+                        <label for="sport" class="flex flex-col align-center"><img src="../imgs/soccer.png" alt="Illustration of two men playing soccer"/><input id="sport" value="organized sports" name="exercise" type="checkbox">Organized Sports</label>   
                     </div>         
                 </div>
             </div>
